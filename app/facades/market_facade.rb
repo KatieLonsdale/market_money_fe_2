@@ -6,4 +6,8 @@ class MarketFacade
     end
     markets
   end
+
+  # def more_info(id)
+  #   Market
+  # end
 end
