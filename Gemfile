@@ -72,4 +72,6 @@ group :test do
   gem 'capybara'
   gem 'pry'
   gem 'launchy'
+  gem 'webmock'
+  gem 'vcr'
 end

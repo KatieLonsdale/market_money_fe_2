@@ -5,7 +5,7 @@ RSpec.describe 'Markets index page' do
     before(:each) do
       @markets = MarketFacade.new.all_markets
     end
-    it 'I see all markets listed with their name, city, and state' do
+    it 'I see all markets listed with their name, city, and state', :vcr do
       visit markets_path
 
       within("#market-322458") do
@@ -20,15 +20,13 @@ RSpec.describe 'Markets index page' do
         expect(page).to have_content("Nevada")
       end
     end
-    xit "has a button that links to each market's show page" do
-      @markets.each do |market|
-        visit markets_path
-        within("#market-#{market.id}") do
-          expect(page).to have_button("More Info")
-          click_button("More Info")
-        end
-        expect(current_path).to eq(market_path(market.id))
+    it "has a button that links to each market's show page", :vcr do
+      visit markets_path
+      within("#market-322458") do
+        expect(page).to have_button("More Info")
+        click_button("More Info")
       end
+      expect(current_path).to eq(market_path(322458))
     end
   end
 end
