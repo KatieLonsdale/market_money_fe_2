@@ -1,0 +1,7 @@
+<% @markets.each do |market| %>
+  <div id= "market-<%= market.id %>">
+    <%= market.name %>
+    <%= market.city %>
+    <%= market.state %>
+  </div>
+<% end %>
