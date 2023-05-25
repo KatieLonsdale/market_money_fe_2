@@ -1,7 +1,8 @@
-<% @markets.each do |market| %>
+<% @facade.all_markets.each do |market| %>
   <div id= "market-<%= market.id %>">
     <%= market.name %>
     <%= market.city %>
     <%= market.state %>
+    <%= button_to "More Info", market_path(market.id), method: :get %>
   </div>
 <% end %>
