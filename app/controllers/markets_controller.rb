@@ -1,5 +1,9 @@
 class MarketsController < ApplicationController
   def index
-    @markets = MarketFacade.new.all_markets
+    @facade = MarketFacade.new
+  end
+
+  def show
+    
   end
 end
