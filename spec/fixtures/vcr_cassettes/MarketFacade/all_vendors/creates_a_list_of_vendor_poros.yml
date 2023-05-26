@@ -2,58 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v0/markets/322474
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.5
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Download-Options:
-      - noopen
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"24de0d2f904f643b0d3957a88ecf8ec5"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a73e4111-d468-44d8-ada9-8a2bbcae31a5
-      X-Runtime:
-      - '0.007669'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.65, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.83
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"322474","type":"market","attributes":{"name":"2nd Street
-        Farmers'' Market","street":"194 second street","city":"Amherst","county":"Amherst","state":"Virginia","zip":"24521","lat":"37.583311","lon":"-79.048573","vendor_count":35}}}'
-  recorded_at: Fri, 26 May 2023 01:02:09 GMT
-- request:
-    method: get
     uri: http://localhost:3000/api/v0/markets/322474/vendors
     body:
       encoding: US-ASCII
@@ -91,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3f402c19-607e-49f4-a13c-5d4f1fc89bec
+      - e4d5a596-23ee-4bc3-a64d-3a459c2704d3
       X-Runtime:
-      - '0.008128'
+      - '0.011690'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.95, instantiation.active_record;dur=0.12,
-        process_action.action_controller;dur=3.94
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=4.30, instantiation.active_record;dur=0.17,
+        process_action.action_controller;dur=6.92
       Transfer-Encoding:
       - chunked
     body:
@@ -172,5 +120,5 @@ http_interactions:
         Tad Langosh","contact_phone":"848-755-8522","credit_accepted":false}},{"id":"55055","type":"vendor","attributes":{"name":"Herb
         Appeal","description":"Fresh herbs and herbal products.","contact_name":"Mattie
         Doyle","contact_phone":"394.419.5264","credit_accepted":true}}]}'
-  recorded_at: Fri, 26 May 2023 01:02:09 GMT
+  recorded_at: Fri, 26 May 2023 01:02:04 GMT
 recorded_with: VCR 6.1.0

@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9b4accb7-8ab0-44c7-abcb-3f780000efef
+      - d2f04957-5465-4ada-89a3-9f8f341152b5
       X-Runtime:
-      - '0.063941'
+      - '0.007829'
       Server-Timing:
-      - start_processing.action_controller;dur=0.17, sql.active_record;dur=13.69,
-        instantiation.active_record;dur=0.17, process_action.action_controller;dur=50.86
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.55, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.79
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"322474","type":"market","attributes":{"name":"2nd Street
         Farmers'' Market","street":"194 second street","city":"Amherst","county":"Amherst","state":"Virginia","zip":"24521","lat":"37.583311","lon":"-79.048573","vendor_count":35}}}'
-  recorded_at: Fri, 26 May 2023 00:06:26 GMT
+  recorded_at: Fri, 26 May 2023 01:02:10 GMT
 recorded_with: VCR 6.1.0
