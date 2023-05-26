@@ -1,3 +1,9 @@
 <h2><%= @market.name %></h2><br>
 <%= @market.street %><br>
 <%= @market.city %><%= @market.state %><%= @market.zip %>
+
+<div id="vendors">
+  <% @vendors.each do |vendor| %>
+    <%= link_to vendor.name.to_s, vendor_path(vendor.id) %>
+  <% end %>
+</div>
