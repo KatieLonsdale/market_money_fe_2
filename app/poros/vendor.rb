@@ -9,4 +9,8 @@ class Vendor
     @contact_phone = data.dig(:attributes, :contact_phone)
     @credit_accepted = data.dig(:attributes, :credit_accepted)
   end
+
+  def credit_accepted?
+    @credit_accepted ? "YES" : "NO"
+  end
 end
