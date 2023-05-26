@@ -31,7 +31,20 @@ RSpec.describe Vendor do
   describe 'instance methods' do
     describe 'credit_accepted?' do
       it 'returns yes or no depending of if vendor accepts credit' do
+        data = {
+          "id": "55297",
+          "type": "vendor",
+          "attributes": {
+              "name": "Orange County Olive Oil",
+              "description": "Handcrafted olive oil made from locally grown olives",
+              "contact_name": "Syble Hamill",
+              "contact_phone": "1-276-593-3530",
+              "credit_accepted": true
+          }
+        }
+        vendor_2 = Vendor.new(data)
         expect(@vendor.credit_accepted?).to eq("NO")
+        expect(vendor_2.credit_accepted?).to eq("YES")
       end
     end
   end
