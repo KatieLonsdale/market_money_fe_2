@@ -15,5 +15,16 @@ RSpec.describe MarketService do
         end
       end
     end
+    describe 'find_market' do
+      it 'returns the market with given id', :vcr do
+        market = MarketService.find_market(322474)[:data]
+        expect(market).to have_key(:id)
+
+        attributes = [:name, :street, :city, :county, :state, :zip, :lat, :lon, :vendor_count]
+        attributes.each do |attribute|
+          expect(market[:attributes]).to have_key(attribute)
+        end
+      end
+    end
   end
 end
