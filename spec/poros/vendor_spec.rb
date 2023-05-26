@@ -27,4 +27,12 @@ RSpec.describe Vendor do
       expect(@vendor.credit_accepted).to eq(false)
     end
   end
+
+  describe 'instance methods' do
+    describe 'credit_accepted?' do
+      it 'returns yes or no depending of if vendor accepts credit' do
+        expect(@vendor.credit_accepted?).to eq("NO")
+      end
+    end
+  end
 end
