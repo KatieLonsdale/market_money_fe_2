@@ -30,5 +30,21 @@ RSpec.describe MarketService do
         expect(market.dig(:attributes, :street)).to eq("194 second street")
       end
     end
+    describe 'all_vendors' do
+      it 'returns results for all vendors for a given market', :vcr do
+        vendors = MarketService.all_vendors(322474)[:data]
+        
+        attributes = [:name, :description, :contact_name, :contact_phone, :credit_accepted]
+        vendors.each do |vendor|
+          expect(vendor).to have_key(:id)
+          attributes.each do |attribute|
+            expect(vendor[:attributes]).to have_key(attribute)
+          end
+        end
+
+        expect(vendors.dig(0, :attributes, :name)).to eq("Orange County Olive Oil")
+        expect(vendors.dig(0, :attributes, :description)).to eq("Handcrafted olive oil made from locally grown olives")
+      end
+    end
   end
 end
