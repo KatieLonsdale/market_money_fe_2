@@ -8,7 +8,7 @@ class MarketFacade
   end
 
   def find_market(id)
-    data = MarketService.find_market(id)
+    data = MarketService.find_market(id)[:data]
     Market.new(data)
   end
 
