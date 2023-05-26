@@ -11,7 +11,12 @@ RSpec.describe MarketFacade do
     end
   end
 
-  # describe 'more_info' do
-  #   it ''
-  # end
+  describe 'find_market' do
+    it 'returns the details of the market with a given id', :vcr do
+      mf = MarketFacade.new
+      market = mf.find_market(322474)
+
+      expect(market).to be_a(Market)
+    end
+  end
 end
