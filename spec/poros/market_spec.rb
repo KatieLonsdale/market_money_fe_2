@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe Market do
   describe 'initialize' do
     before(:each) do
-      data = {data: 
-        {
+      data = {
           "id": "322458",
           "type": "market",
           "attributes": {
@@ -19,8 +18,6 @@ RSpec.describe Market do
               "vendor_count": 1
           }
         }
-      }
-      
       @market = Market.new(data)
     end
     it 'exists and has attributes' do
