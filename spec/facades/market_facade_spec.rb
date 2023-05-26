@@ -19,4 +19,14 @@ RSpec.describe MarketFacade do
       expect(market).to be_a(Market)
     end
   end
+
+  describe 'all_vendors' do
+    it 'creates a list of vendor poros', :vcr do
+      mf = MarketFacade.new
+      vendors = mf.all_vendors(322474)
+
+      expect(vendors).to be_a(Array)
+      expect(vendors).to be_all(Vendor)
+    end
+  end
 end
