@@ -7,7 +7,8 @@ class MarketFacade
     markets
   end
 
-  # def more_info(id)
-  #   Market
-  # end
+  def find_market(id)
+    data = MarketService.find_market(id)
+    Market.new(data)
+  end
 end
