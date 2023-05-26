@@ -11,4 +11,12 @@ class MarketFacade
     data = MarketService.find_market(id)
     Market.new(data)
   end
+
+  def all_vendors(id)
+    vendors = []
+    MarketService.all_vendors(id)[:data].each do |vendor|
+      vendors << Vendor.new(vendor)
+    end
+    vendors
+  end
 end
