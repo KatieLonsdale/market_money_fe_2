@@ -3,21 +3,23 @@ require 'rails_helper'
 RSpec.describe Market do
   describe 'initialize' do
     before(:each) do
-      data = {
-        "id": "322458",
-        "type": "market",
-        "attributes": {
-            "name": "14&U Farmers' Market",
-            "street": "1400 U Street NW ",
-            "city": "Washington",
-            "county": "District of Columbia",
-            "state": "District of Columbia",
-            "zip": "20009",
-            "lat": "38.9169984",
-            "lon": "-77.0320505",
-            "vendor_count": 1
+      data = {data: 
+        {
+          "id": "322458",
+          "type": "market",
+          "attributes": {
+              "name": "14&U Farmers' Market",
+              "street": "1400 U Street NW ",
+              "city": "Washington",
+              "county": "District of Columbia",
+              "state": "District of Columbia",
+              "zip": "20009",
+              "lat": "38.9169984",
+              "lon": "-77.0320505",
+              "vendor_count": 1
           }
         }
+      }
       
       @market = Market.new(data)
     end
